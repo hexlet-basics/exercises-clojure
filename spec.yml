@@ -1,0 +1,7 @@
+---
+
+language:
+  docker_image: "hexletbasics/exercises-clojure"
+  extension: clj
+  exercise_filename: index.clj
+  exercise_test_filename: test.clj
