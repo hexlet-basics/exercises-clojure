@@ -10,4 +10,8 @@ WORKDIR /exercises-clojure
 
 COPY . .
 
+# FIXME: При первом запуске тестов clojure скачивает необходимые зависимости.
+# ВОзможно не самая лучшая команда для этого
+RUN clj -X:deps prep
+
 ENV PATH=/exercises-clojure/bin:$PATH
