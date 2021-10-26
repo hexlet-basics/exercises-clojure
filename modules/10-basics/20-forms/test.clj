@@ -1,5 +1,5 @@
 (ns form-test)
 
-(load-file "../../../src/test-helper.clj")
+(load "test-helper")
 
-(assert-output "./index.clj" "84\n")
+(assert-output "index.clj" "84")

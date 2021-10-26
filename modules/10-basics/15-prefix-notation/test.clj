@@ -1,5 +1,5 @@
 (ns prefix-notation-test)
 
-(load-file "../../../src/test-helper.clj")
+(load "test-helper")
 
-(assert-output "./index.clj" "-3\n")
+(assert-output "index.clj" "-3")

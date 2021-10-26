@@ -1,5 +1,5 @@
 (ns jvm-errors-test)
 
-(load-file "../../../src/test-helper.clj")
+(load "test-helper")
 
-(assert-output "./index.clj" "256\n")
+(assert-output "index.clj" "256")

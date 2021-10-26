@@ -1,5 +1,5 @@
 (ns hello-world-test)
 
-(load-file "../../../src/test-helper.clj")
+(load "test-helper")
 
-(assert-output "./index.clj" "Hello, World!\n")
+(assert-output "index.clj" "Hello, World!")

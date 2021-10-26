@@ -1,5 +1,5 @@
 (ns evaluation-order-test)
 
-(load-file "../../../src/test-helper.clj")
+(load "test-helper")
 
-(assert-output "./index.clj" "46\n")
+(assert-output "index.clj" "46")
