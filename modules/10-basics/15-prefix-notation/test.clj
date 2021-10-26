@@ -1,8 +1,11 @@
 (ns prefix-notation-test
-  (:require [clojure.test :refer [deftest run-tests is]]))
+  (:require [clojure.test :refer [deftest run-tests is successful?]]))
 
 (deftest solution-test
   (let [out (with-out-str (load-file "./index.clj"))]
     (is (= out "-3\n"))))
 
-(run-tests 'prefix-notation-test)
+(defn check []
+  (when-not (successful? (run-tests)) (System/exit 1)))
+
+(check)
