@@ -1,11 +1,5 @@
-(ns form-test
-  (:require [clojure.test :refer [deftest run-tests is successful?]]))
+(ns form-test)
 
-(deftest solution-test
-  (let [out (with-out-str (load-file "./index.clj"))]
-    (is (= out "84\n"))))
+(load-file "../../../src/test-helper.clj")
 
-(defn check []
-  (when-not (successful? (run-tests)) (System/exit 1)))
-
-(check)
+(assert-output "./index.clj" "84\n")
