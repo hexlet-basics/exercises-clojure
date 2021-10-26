@@ -1,1 +1,1 @@
-clj -M test.clj 2>&1
+clj -Sdeps '{:paths ["../../../src"]}}' -M test.clj 2>&1

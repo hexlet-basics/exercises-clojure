@@ -1,8 +1,5 @@
-(ns jvm-errors-test
-  (:require [clojure.test :refer [deftest run-tests is]]))
+(ns jvm-errors-test)
 
-(deftest solution-test
-  (let [out (with-out-str (load-file "./index.clj"))]
-    (is (= out "256\n"))))
+(load "test-helper")
 
-(run-tests 'jvm-errors-test)
+(assert-output "index.clj" "256")

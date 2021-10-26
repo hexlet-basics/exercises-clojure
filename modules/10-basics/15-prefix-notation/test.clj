@@ -1,8 +1,5 @@
-(ns prefix-notation-test
-  (:require [clojure.test :refer [deftest run-tests is]]))
+(ns prefix-notation-test)
 
-(deftest solution-test
-  (let [out (with-out-str (load-file "./index.clj"))]
-    (is (= out "-3\n"))))
+(load "test-helper")
 
-(run-tests 'prefix-notation-test)
+(assert-output "index.clj" "-3")

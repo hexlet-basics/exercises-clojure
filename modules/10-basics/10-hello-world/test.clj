@@ -1,8 +1,5 @@
-(ns hello-world-test
-  (:require [clojure.test :refer [deftest run-tests is]]))
+(ns hello-world-test)
 
-(deftest solution-test
-  (let [out (with-out-str (load-file "./index.clj"))]
-    (is (= out "Hello, World!\n"))))
+(load "test-helper")
 
-(run-tests 'hello-world-test)
+(assert-output "index.clj" "Hello, World!")
