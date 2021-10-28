@@ -1,5 +1,4 @@
-(ns evaluation-order-test)
+(ns evaluation-order-test
+  (:require [test-helper :refer [assert-output]]))
 
-(load "test-helper")
-
-(assert-output "index.clj" "46")
+(assert-output "46")

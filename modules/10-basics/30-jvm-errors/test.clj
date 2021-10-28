@@ -1,5 +1,4 @@
-(ns jvm-errors-test)
+(ns jvm-errors-test
+  (:require [test-helper :refer [assert-output]]))
 
-(load "test-helper")
-
-(assert-output "index.clj" "256")
+(assert-output "256")

@@ -1,5 +1,4 @@
-(ns prefix-notation-test)
+(ns prefix-notation-test
+  (:require [test-helper :refer [assert-output]]))
 
-(load "test-helper")
-
-(assert-output "index.clj" "-3")
+(assert-output "-3")
