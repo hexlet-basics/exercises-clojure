@@ -1,5 +1,4 @@
-(ns define-test)
+(ns define-test
+  (:require [test-helper :refer [assert-output]]))
 
-(load "test-helper")
-
-(assert-output "index.clj" "10")
+(assert-output "10")

@@ -1,5 +1,4 @@
-(ns hello-world-test)
+(ns hello-world-test
+  (:require [test-helper :refer [assert-output]]))
 
-(load "test-helper")
-
-(assert-output "index.clj" "Hello, World!")
+(assert-output "Hello, World!")

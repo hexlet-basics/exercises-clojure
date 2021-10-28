@@ -1,5 +1,4 @@
-(ns form-test)
+(ns form-test
+  (:require [test-helper :refer [assert-output]]))
 
-(load "test-helper")
-
-(assert-output "index.clj" "84")
+(assert-output "84")
