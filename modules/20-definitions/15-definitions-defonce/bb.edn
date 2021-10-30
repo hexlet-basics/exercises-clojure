@@ -1,0 +1,3 @@
+{:tasks
+ {:init (load-file "../../../src/test-helper.clj")
+  check-solution (load-file "test.clj")}}
