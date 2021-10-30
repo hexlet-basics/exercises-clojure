@@ -1,4 +1,4 @@
-(ns bool-test
+(ns loops-test
   (:require [test-helper :refer [assert-solution]]
             [index :refer [maps]]))
 

@@ -1,4 +1,4 @@
-(ns bool-test
+(ns reduce-test
   (:require [test-helper :refer [assert-solution]]
             [index :refer [max-delta]]))
 

@@ -1,4 +1,4 @@
-(ns bool-test
+(ns filters-test
   (:require [test-helper :refer [assert-solution]]
             [index :refer [increment-numbers]]))
 

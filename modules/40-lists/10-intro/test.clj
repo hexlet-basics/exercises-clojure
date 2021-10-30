@@ -1,4 +1,4 @@
-(ns bool-test
+(ns intro-test
   (:require [test-helper :refer [assert-solution]]
             [index :refer [triple]]))
 
