@@ -15,7 +15,7 @@
   (let [combined (map vector samples expected)]
     (deftest solution-test
       (doseq [[sample result] combined]
-        (is (= (solution sample) result)))))
+        (is (= (apply solution sample) result)))))
   (run-test))
 
 (defn ^:export check-eq [val expected]
