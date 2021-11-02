@@ -1,4 +1,4 @@
 (ns index)
 ;BEGIN
-(defn solution [n] (* n n))
+(defn square [n] (* n n))
 ;END
