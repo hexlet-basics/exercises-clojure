@@ -11,13 +11,13 @@ theory: |
   (def my-str "hello, world")
 
   (def splitted-str
-    (s/split my-str #" "))   ; ["hello" "world"]
+    (s/split my-str #", "))   ; ["hello" "world"]
   
-  (str my-str "!")           ; "hello world!"
+  (str my-str "!")            ; "hello, world!"
 
-  (s/join #"," splitted-str) ; "hello, world"
+  (s/join #", " splitted-str) ; "hello, world"
 
-  (count my-str)             ; 12
+  (count my-str)              ; 12
   ```
 
   Работа со строками в целом типична, как и в большинстве языков программирования.
