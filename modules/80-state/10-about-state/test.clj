@@ -1,4 +1,4 @@
-(ns intro-test
+(ns about-state-test
   (:require [test-helper :refer [assert-solution]]
             [index :refer [transit]]))
 
