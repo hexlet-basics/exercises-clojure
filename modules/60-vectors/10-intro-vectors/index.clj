@@ -1,4 +1,5 @@
 (ns index)
 ;BEGIN
-(println "hello, world")
+(defn zip [v1 v2]
+  (mapv vector v1 v2))
 ;END
