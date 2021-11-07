@@ -1,4 +1,5 @@
 (ns index)
 ;BEGIN
-(println "hello, world")
+(defn resolve [domains domain]
+  (get domains domain "DNS_PROBE_FINISHED_NXDOMAIN"))
 ;END
