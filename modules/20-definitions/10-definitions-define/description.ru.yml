@@ -12,7 +12,7 @@ theory: |
 
   ```clojure
   ; def создаёт "связывание".
-  (def lang clojure)
+  (def lang "clojure")
   (println lang) ; => clojure
   ```
 
