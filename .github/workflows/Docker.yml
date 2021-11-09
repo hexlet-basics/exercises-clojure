@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: hexletbasics/exercises-ruby
+  IMAGE_NAME: hexletbasics/exercises-clojure
   IS_PUSH: ${{ github.event_name == 'push' }}
   COLOR_MAP: '{ success: "#800000", failure: "#008000" }'
 
