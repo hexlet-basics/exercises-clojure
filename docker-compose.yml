@@ -4,7 +4,5 @@ version: '3'
 
 services:
   exercises:
-    build: .
-    volumes:
-      - .:/exercises-clojure
+    image: hexletbasics/exercises-clojure:cached
     command: make check
