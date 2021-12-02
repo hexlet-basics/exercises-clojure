@@ -43,8 +43,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Check
-        run: |
-          docker-compose --file docker-compose.yml up --abort-on-container-exit
+        run: make ci-check
 
       - name: Push
         if: ${{ env.IS_PUSH == 'true' }}
