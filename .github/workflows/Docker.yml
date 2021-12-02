@@ -9,44 +9,45 @@ on:
       - main
 
 env:
-  IMAGE_NAME: hexletbasics/exercises-clojure
+  REGISTRY_NAME: hexletbasics
   IS_PUSH: ${{ github.event_name == 'push' }}
   COLOR_MAP: '{ success: "#800000", failure: "#008000" }'
 
 jobs:
   main:
     runs-on: ubuntu-latest
-    steps:
 
-      -
-        name: Set up Docker Buildx
+    steps:
+      - name: Set image name
+        run: |
+          echo "IMAGE_NAME=${{ env.REGISTRY_NAME }}/$(echo "$GITHUB_REPOSITORY" | cut -d/ -f2)" >> $GITHUB_ENV
+
+      - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
-      -
-        name: Login to DockerHub
-        uses: docker/login-action@v1
+
+      - name: Login to DockerHub
         if: ${{ env.IS_PUSH == 'true' }}
+        uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build
         uses: docker/build-push-action@v2
-        if: ${{ env.IS_PUSH == 'true' }}
         with:
           cache-from: type=registry,ref=${{ env.IMAGE_NAME }}:cached
           cache-to: type=inline
-          push: true
           tags: |
-            ${{ env.IMAGE_NAME }}:latest
             ${{ env.IMAGE_NAME }}:cached
+
       - uses: actions/checkout@v2
 
       - name: Check
-        run: |
-          docker-compose --file docker-compose.yml up --abort-on-container-exit
+        run: make ci-check
+
       - name: Push
-        uses: docker/build-push-action@v2
         if: ${{ env.IS_PUSH == 'true' }}
+        uses: docker/build-push-action@v2
         with:
           push: true
           tags: ${{ env.IMAGE_NAME }}:latest

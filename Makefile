@@ -16,3 +16,6 @@ compose-bash:
 
 compose-test:
 	docker-compose run exercises make test
+
+ci-check:
+	docker-compose --file docker-compose.yml up --abort-on-container-exit
