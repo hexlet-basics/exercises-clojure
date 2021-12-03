@@ -37,25 +37,20 @@ jobs:
         with:
           cache-from: type=registry,ref=${{ env.IMAGE_NAME }}:cached
           cache-to: type=inline
+          load: true
           tags: |
             ${{ env.IMAGE_NAME }}:cached
+            ${{ env.IMAGE_NAME }}:latest
+
+      - name: Push cached
+        if: ${{ env.IS_PUSH == 'true' }}
+        run: docker push ${{ env.IMAGE_NAME }}:cached
 
       - uses: actions/checkout@v2
 
       - name: Check
         run: make ci-check
 
-      - name: Push
+      - name: Push latest
         if: ${{ env.IS_PUSH == 'true' }}
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: ${{ env.IMAGE_NAME }}:latest
-
-      - name: Send notification into Slack
-        if: ${{ always() && env.IS_PUSH == 'true' }}
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_COLOR: ${{ fromJson(env.COLOR_MAP)[job.status] }}
-          SLACK_TITLE: ${{ job.status }}
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        run: docker push ${{ env.IMAGE_NAME }}:latest
