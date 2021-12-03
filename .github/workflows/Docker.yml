@@ -24,6 +24,9 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
+        with:
+          # NOTE: Using a docker driver reduces build times.
+          driver: docker
 
       - name: Login to DockerHub
         if: ${{ env.IS_PUSH == 'true' }}
@@ -32,12 +35,15 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+        # NOTE: But you need to download the cached image separately. Otherwise, caching works every other time.
+      - name: Pull cached
+        run: docker pull ${{ env.IMAGE_NAME }}:cached || true
+
       - name: Build
         uses: docker/build-push-action@v2
         with:
-          cache-from: type=registry,ref=${{ env.IMAGE_NAME }}:cached
+          cache-from: ${{ env.IMAGE_NAME }}:cached
           cache-to: type=inline
-          load: true
           tags: |
             ${{ env.IMAGE_NAME }}:cached
             ${{ env.IMAGE_NAME }}:latest
