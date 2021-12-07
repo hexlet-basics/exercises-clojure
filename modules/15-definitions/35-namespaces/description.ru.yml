@@ -39,7 +39,7 @@ theory: |
   ```
 
 instructions: |
-  Определите константу phone со значением `"iphone"`
+  Определите переменную `phone` со значением `"iphone"`
 
 definitions: []
 tips: []
