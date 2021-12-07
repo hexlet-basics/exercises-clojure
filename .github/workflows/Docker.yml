@@ -8,55 +8,12 @@ on:
     branches:
       - main
 
-env:
-  REGISTRY_NAME: hexletbasics
-  IS_PUSH: ${{ github.event_name == 'push' }}
-  COLOR_MAP: '{ success: "#800000", failure: "#008000" }'
-
 jobs:
   main:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set image name
-        run: |
-          echo "IMAGE_NAME=${{ env.REGISTRY_NAME }}/$(echo "$GITHUB_REPOSITORY" | cut -d/ -f2)" >> $GITHUB_ENV
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+      - uses: hexlet-basics/exercises-action@release
         with:
-          # NOTE: Using a docker driver reduces build times.
-          driver: docker
-
-      - name: Login to DockerHub
-        if: ${{ env.IS_PUSH == 'true' }}
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-
-        # NOTE: But you need to download the cached image separately. Otherwise, caching works every other time.
-      - name: Pull cached
-        run: docker pull ${{ env.IMAGE_NAME }}:cached || true
-
-      - name: Build
-        uses: docker/build-push-action@v2
-        with:
-          cache-from: ${{ env.IMAGE_NAME }}:cached
-          cache-to: type=inline
-          tags: |
-            ${{ env.IMAGE_NAME }}:cached
-            ${{ env.IMAGE_NAME }}:latest
-
-      - name: Push cached
-        if: ${{ env.IS_PUSH == 'true' }}
-        run: docker push ${{ env.IMAGE_NAME }}:cached
-
-      - uses: actions/checkout@v2
-
-      - name: Check
-        run: make ci-check
-
-      - name: Push latest
-        if: ${{ env.IS_PUSH == 'true' }}
-        run: docker push ${{ env.IMAGE_NAME }}:latest
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
