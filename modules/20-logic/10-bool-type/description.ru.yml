@@ -48,4 +48,6 @@ instructions: |
   (leap-year? 2100) ; false
   ```
 
-tips: []
+tips:
+  - |
+    [Високосный год](https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D1%81%D0%BE%D0%BA%D0%BE%D1%81%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%B4)
