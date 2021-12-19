@@ -1,4 +1,4 @@
 (ns intro-macros-test
-  (:require [test-helper :refer [assert-solution]]))
+  (:require [test-helper :refer [assert-output]]))
 
-(assert-solution [[1]] [1] identity)
+(assert-output "3\nHello from fn!\nHello from macro!\n3")
