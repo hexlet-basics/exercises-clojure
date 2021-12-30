@@ -29,7 +29,7 @@ theory: |
   ```clojure
   (def broken-agent (agent 0))
 
-  (send broken-agent (fn	[_]	(throw		
+  (send broken-agent (fn	[_]	(throw
     (Exception. "Houston we have a problem!"))))
   #object[clojure.lang.Agent 0xd76bd8c {:status :ready, :val 0}]
 
@@ -41,7 +41,7 @@ theory: |
 
   (def not-broken-agent (agent 0 :error-mode :continue))
 
-  (send not-broken-agent (fn	[_]	(throw		
+  (send not-broken-agent (fn	[_]	(throw
     (Exception. "Houston we have one more problem!!!"))))
   #object[clojure.lang.Agent 0x44b27f64 {:status :ready, :val 0}]
 
@@ -53,7 +53,7 @@ theory: |
   ```
 
 instructions: |
-  Реализуйте функцию `transit`, которая ведет себя так же, как в упражении с атомами, только с помощью агентов. Функция принимает два агента, которые представляют счета в банках и число денег, которое нужно перевести с первого на второй аккаунт, в результате выполнения функции, верните счета в виде вектора (помните, изменения в агентах применяются асинхронно!).
+  Реализуйте функцию `transit`, которая ведет себя так же, как в упражнении с атомами, только с помощью агентов. Функция принимает два агента. Агенты представляют счета в банках и число денег, которое нужно перевести с первого на второй аккаунт, в результате выполнения функции, верните счета в виде вектора (помните, изменения в агентах применяются асинхронно!).
 
   ```clojure
   (transit (agent 100) (agent 20) 20)
