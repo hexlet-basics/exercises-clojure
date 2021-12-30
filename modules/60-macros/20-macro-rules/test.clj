@@ -1,4 +1,8 @@
 (ns macro-rules-test
-  (:require [test-helper :refer [assert-output]]))
+  (:require [test-helper :refer [assert-solution]]
+            [index :refer [triplet-macro]]))
 
-(assert-output "(1 2 3)\n(-1 -2 -3)")
+(assert-solution
+ [[[1 2 3]] [[-1 -2 -3]] [[1.2 0 2/3]] [["a" "b" ["c"]]]]
+ [(list 1 2 3) (list -1 -2 -3) (list 1.2 0 2/3) (list "a" "b" ["c"])]
+ (fn [[a b c]] (triplet-macro a b c)))
