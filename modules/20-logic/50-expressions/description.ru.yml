@@ -28,13 +28,13 @@ theory: |
 
   ```clojure
   (defn classify [x]
-    (let [is-special
+    (let [special?
            (case x
              (13 42 100500) true
              false)]
       (cond
         (< x 0) "Negative"
-        is-special "Special"
+        special? "Special"
         :else "Boring")))
   ```
 
