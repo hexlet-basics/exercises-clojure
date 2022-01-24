@@ -4,5 +4,5 @@
   (and
    (not (empty? avec))
    (vector? avec)
-   (= (count avec) (count (filterv even? avec)))))
+   (every? even? avec)))
 ;END
