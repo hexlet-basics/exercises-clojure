@@ -46,7 +46,7 @@ instructions: |
 
   - Для Human `Hello, World!`
   - Для Cat `Meow, World!`
-  - Для Dog `Bark, world!`
+  - Для Dog `Bark, World!`
 
   Поочередно создайте инстанс каждого класса и вызовите у них метод `say-something`.
 
