@@ -1,4 +1,4 @@
-(ns intro-test
+(ns str-format-test
   (:require [test-helper :refer [assert-solution]]
             [index :refer [number-presenter]]))
 
