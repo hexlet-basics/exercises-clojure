@@ -1,4 +1,4 @@
-(ns intro-test
+(ns chars-test
   (:require [test-helper :refer [assert-solution]]
             [index :refer [next-chars]]))
 

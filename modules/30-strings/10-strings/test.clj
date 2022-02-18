@@ -1,8 +1,8 @@
-(ns intro-test
+(ns intro-str-test
   (:require [test-helper :refer [assert-solution]]
             [index :refer [str-reverse]]))
 
 (assert-solution
- [[["my" "str"]] [[]] [["hello" "world" "foo" "!"]]]
- [["ym" "rts"] [] ["olleh" "dlrow" "oof" "!"]]
+ [["str"] [""] ["Hello"] ["some-string!"]]
+ ["rts" "" "olleH" "!gnirts-emos"]
  str-reverse)
