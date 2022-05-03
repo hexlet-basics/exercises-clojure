@@ -1,0 +1,5 @@
+---
+
+name: Logic
+description: |
+  Boolean algebra, conditional expressions, branching and selection constructions are the things without which no program of any complexity is possible. Clojure has its own interesting features when it comes to programming Boolean logic: this module is about that.

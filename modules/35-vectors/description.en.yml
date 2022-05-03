@@ -1,0 +1,5 @@
+---
+
+name: Vectors
+description: |
+  Arrays are one of the universal and frequently used data structures, in Clojure arrays are commonly called vectors, which we will inspect in this module.

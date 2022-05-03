@@ -1,0 +1,5 @@
+---
+
+name: Hash-maps
+description: |
+  When it comes to heterogeneous data (data of different types), hash maps come to the rescue, inspect their use in Clojure.

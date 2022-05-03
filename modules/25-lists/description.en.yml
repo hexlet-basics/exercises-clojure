@@ -1,0 +1,5 @@
+---
+
+name: Lists
+description: |
+  The main data structure in Lisp languages is a list. It is not for nothing that "LISP" stands for "LISt Processor", that is, "list processor". Lists are used in languages to store data and to write code: a Lisp program itself consists of a list of lists of lists (((...))). This module teaches how to declare lists and how to process their contents in various ways.
