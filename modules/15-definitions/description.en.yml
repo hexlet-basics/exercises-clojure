@@ -1,0 +1,5 @@
+---
+
+name: Definitions in Clojure
+description: |
+This module describes how to deal with the declaration of variables and functions.

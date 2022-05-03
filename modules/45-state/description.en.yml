@@ -1,0 +1,5 @@
+---
+
+name: State
+description: |
+  One of the unique features of Clojure is the handling of state, in this module we will discuss STM (Software Transactional Memory), atoms, agents and references.

@@ -1,0 +1,5 @@
+---
+
+name: Polymorphism
+description: |
+  Quite often there are problems that can be solved by having polymorphic behavior, let's see how we can get such behavior in Clojure.

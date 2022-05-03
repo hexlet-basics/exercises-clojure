@@ -1,0 +1,5 @@
+---
+
+name: Transducers
+description: |
+  Sometimes business requirements are too complex and contradictory. Putting them on a functional style becomes too expensive. To solve such problems, Clojure created transdusers, which will be discussed in this module.

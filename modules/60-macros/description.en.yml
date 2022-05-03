@@ -1,0 +1,5 @@
+---
+
+name: Macros
+description: |
+  Thanks to the system of macros, any Lisp language can extend its expressiveness to infinity (but using macros is black magic, so they must be used with care and understanding). In this module we will see how to work with macros in Clojure.

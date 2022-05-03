@@ -1,0 +1,5 @@
+---
+
+name: Strings
+description: |
+  Any programming language knows how to work with text, strings, characters. This module shows how to work with text in Clojure.
