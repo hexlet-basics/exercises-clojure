@@ -28,4 +28,6 @@ instructions: |
   (vec-even? [1 3 5])   ; => false
   ```
 
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojure.org/reference/atoms)

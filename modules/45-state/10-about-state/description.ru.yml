@@ -45,3 +45,7 @@ tips:
     [Про язык Elixir](https://elixir-lang.org/)
   - |
     [Про MVCC](https://en.wikipedia.org/wiki/Multiversion_concurrency_control)
+  - |
+    [Официальная документация](https://clojure.org/reference/atoms)
+  - |
+    [Про ссылки и транзакции](https://clojure.org/reference/refs)

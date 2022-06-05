@@ -112,4 +112,6 @@ instructions: |
   ; => 9
   ```
 
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojure.org/reference/multimethods)

@@ -62,4 +62,6 @@ instructions: |
   ; => [0 80]
   ```
 
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojure.org/reference/agents)
