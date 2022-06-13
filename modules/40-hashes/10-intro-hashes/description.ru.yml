@@ -44,4 +44,6 @@ instructions: |
   ; => "DNS_PROBE_FINISHED_NXDOMAIN"
   ```
 
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/hash-map)
