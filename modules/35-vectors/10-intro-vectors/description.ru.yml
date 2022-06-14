@@ -58,4 +58,6 @@ instructions: |
   ; => [[1 3] [2 4]]
   ```
 
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojure.org/guides/learn/sequential_colls)

@@ -29,4 +29,6 @@ instructions: |
   (str-reverse "Hello") ; "olleH"
   (str-reverse "")      ; ""
   ```
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.string)

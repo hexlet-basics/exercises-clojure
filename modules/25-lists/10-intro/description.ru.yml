@@ -23,4 +23,6 @@ instructions: |
   (triple "a") ; '("a" "a" "a")
   (triple 0)   ; '(0 0 0)
   ```
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojure.org/guides/learn/sequential_colls#_lists)
