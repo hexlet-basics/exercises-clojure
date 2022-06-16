@@ -11,6 +11,8 @@ theory: |
   class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
   ```
 
+  Ошибка выглядит не очень информативно...
+
   Рассмотрим наиболее распространенные ошибки, которые могут возникнуть и разберемся, что они означают:
 
   `X can not be cast to Y`
