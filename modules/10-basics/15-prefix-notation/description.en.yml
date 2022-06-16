@@ -1,8 +1,8 @@
 ---
 
-name: Префиксная нотация
+name: Prefix notation
 theory: |
-  Как вы могли заметить, в популярных языках программирования, вызов функции выглядит примерно так `f(arg1, arg2, arg3)`, однако в Clojure, как и в других лиспо-подобных языках, используется префиксная нотация (польская запись). С непривычки такой способ записи может показаться неудобным, однако при вложенном вызове становится очевидным удобство такого подхода (опять же, потребуется некоторое время, чтобы привыкнуть). Например, вложенный вызов функции сложения, вычитания и умножения (да, математические операции тоже функции!) выглядит следующим образом:
+  As you may have noticed, in popular programming languages, a function call looks something like `f(arg1, arg2, arg3)`, but Clojure, like other Lisp-like languages, uses prefix notation (Polish notation). This way of notation may seem awkward at first sight, but with a nested call, the convenience of this approach becomes apparent (it will take some time to get used to it). For example, a nested function call for addition, subtraction and multiplication (yes, mathematical operations are functions too!) looks like this:
 
   ```clojure
   (+
@@ -12,7 +12,7 @@ theory: |
     (+ 7 8 9 10 11 12))
   ```
 
-  Если аккуратно форматировать Clojure код, то его удобно читать, особенно, если вызов функции идет больше чем для двух аргументов. Еще стоит заметить, что перечисление элементов не требует запятых, однако их можно писать, Clojure принимает оба варианта.
+  If you format the Clojure code carefully, it is easy to read, especially if the function call goes for more than two arguments. It is also worth noting that enumerating elements does not require commas, but they can be written, Clojure accepts both variants.
 
   ```clojure
   (+ 1 2 3)   ; => 6
@@ -20,7 +20,9 @@ theory: |
   ```
 
 instructions: |
-  Выведите в стандартный поток вывода (с помощью функции `println`) следующее выражение: `1 + 10 - 2 * 7`
+  Print the following expression to the standard output stream (using the `println` function): `1 + 10 - 2 * 7`.
 tips:
   - |
-    [Префиксная нотация](https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C)
+    [Polish notation](https://en.wikipedia.org/wiki/Polish_notation)
+  - |
+    [Default Clojure code linter and formatter](https://github.com/weavejester/cljfmt)
