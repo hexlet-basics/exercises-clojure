@@ -1,6 +1,0 @@
-{:tasks
- {:requires ([babashka.classpath :as cp])
-  :init (do
-          (cp/add-classpath ".")
-          (load-file "../../../src/test-helper.clj"))
-  check-solution (load-file "test.clj")}}
