@@ -51,7 +51,7 @@ theory: |
 
   `X - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings`
 
-  Such an error occurs during the compilation of Clojure code, for example we have a form `let` that uses a vector to connect identifier and data, inside which there are two elements, the identifier itself and the data. Clojure internally uses `clojure.spec' to check such declarations, so the error message may be slightly different each time:
+  Such an error occurs during the compilation of Clojure code, for example we have a form `let` that uses a vector to connect identifier and data, inside which there are two elements, the identifier itself and the data. Clojure internally uses `clojure.spec` to check such declarations, so the error message may be slightly different each time:
 
   ```clojure
   ; valid code
@@ -71,7 +71,7 @@ theory: |
   (Integer/parseInt "123") ; 123
   ```
 
-  In the code above, we called a static Java method that parse a string into a number. The same applies to libraries written for Java. There are also projects that use Java, Scala and Clojure at the same time.
+  In the code above, we called a static Java method that parses a string into a number. The same applies to libraries written for Java. There are also projects that use Java, Scala and Clojure at the same time.
 
 instructions: |
   Print to the standard output stream (using the `println` function) the result of parsing the string `256` (using the `Integer/parseInt` method).

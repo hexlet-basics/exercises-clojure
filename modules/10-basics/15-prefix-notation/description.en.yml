@@ -2,7 +2,7 @@
 
 name: Prefix notation
 theory: |
-  As you may have noticed, in popular programming languages, a function call looks something like `f(arg1, arg2, arg3)`, but Clojure, like other Lisp-like languages, uses prefix notation (Polish notation). This way of notation may seem awkward at first sight, but with a nested call, the convenience of this approach becomes apparent (it will take some time to get used to it). For example, a nested function call for addition, subtraction and multiplication (yes, mathematical operations are functions too!) looks like this:
+  As you may have noticed, in popular programming languages, a function call looks something like `f(arg1, arg2, arg3)`, but Clojure, like other Lisp-like languages, uses prefix notation (Polish notation). This notation style may seem awkward at first sight, but with a nested call, the convenience of this approach becomes apparent (it will take some time to get used to it). For example, a nested function call for an addition, subtraction and multiplication (yes, mathematical operations are functions too!) looks like this:
 
   ```clojure
   (+
