@@ -16,6 +16,9 @@ $ make compose
 # run tests
 $ make compose-test
 
+# fix code formatting
+$ make code-format
+
 # run linters and validators
 $ make compose-code-lint
 $ make compose-description-lint
