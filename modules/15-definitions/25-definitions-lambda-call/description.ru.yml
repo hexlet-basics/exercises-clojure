@@ -34,3 +34,6 @@ instructions: |
   2. Запишите результат в переменную.
   3. Выведите переменную на экран.
 definitions: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/fn)

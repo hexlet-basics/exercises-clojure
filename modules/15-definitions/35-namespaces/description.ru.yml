@@ -42,4 +42,6 @@ instructions: |
   Определите переменную `phone` со значением `"iphone"`
 
 definitions: []
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojure.org/reference/namespaces)

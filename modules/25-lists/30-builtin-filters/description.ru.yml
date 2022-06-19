@@ -24,4 +24,6 @@ instructions: |
 
   > Заметьте, Clojure умеет работать с дробями вроде `3/5` и `8/5`!
 
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/filter)

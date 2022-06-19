@@ -34,4 +34,6 @@ instructions: |
   (say-boom "hey")
   (say-boom "go") ; "Boom!"
   ```
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/when)
