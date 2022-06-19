@@ -9,7 +9,10 @@ compose-build:
 	docker-compose build
 
 code-lint:
-	clj -Sdeps '{:deps {cljfmt {:mvn/version "0.8.0"}}}' -m cljfmt.main check modules
+	clj -Sdeps '{:deps {cljfmt {:mvn/version "0.8.0"}}}' -m cljfmt.main check modules src
+
+code-format:
+	clj -Sdeps '{:deps {cljfmt {:mvn/version "0.8.0"}}}' -m cljfmt.main fix modules src
 
 compose-bash:
 	docker-compose run exercises bash
