@@ -86,4 +86,6 @@ instructions: |
   ```
 
 definitions: []
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/let)

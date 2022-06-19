@@ -30,4 +30,6 @@ instructions: |
   (humanize-permission "r") ; read
   (humanize-permission "w") ; write
   ```
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/case)

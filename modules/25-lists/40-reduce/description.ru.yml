@@ -51,4 +51,6 @@ instructions: |
   (Math/abs -13)   ; 13
   (max 1 5 3) ; 5
   ```
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/reduce)

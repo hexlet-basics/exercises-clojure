@@ -34,4 +34,6 @@ instructions: |
   (number-presenter 14)
   ; => "decimal 14  octal 16  hex e  upper-case hex E"
   ```
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/format)

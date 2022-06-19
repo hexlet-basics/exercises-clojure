@@ -23,4 +23,6 @@ instructions: |
   (programmer-level 0) ; junior
   (programmer-level 40) ; senior
   ```
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/cond)

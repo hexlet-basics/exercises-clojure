@@ -29,4 +29,6 @@ instructions: |
 
   Для перевода строки в верхний регистр используйте функцию `upper-case`.
 
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/if)

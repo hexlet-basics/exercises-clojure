@@ -42,4 +42,6 @@ instructions: |
   Здесь
   - `'(11 21)`, это результат применения `inc` к `(list 10 20)`
   - `'(true false)`, это результат применения `string?` к `(list "a" 0)`
-tips: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/map)
