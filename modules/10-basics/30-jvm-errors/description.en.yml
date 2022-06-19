@@ -1,24 +1,26 @@
 ---
 
-name: JVM и ошибки
+name: JVM and errors
 theory: |
-  Немного вспомним про платформу JVM, которую использует Clojure. Очень часто кишки JVM рантайма выглядывают наружу, из-за чего большинство ошибок во время исполнения программ являются трудночитаемыми, особенно если ошибка возникла где-то в глубине. Например:
+  A bit about the JVM platform that Clojure uses. Very often, the guts of the JVM early stage look out, which makes most runtime errors hard to read, especially if the error occurred somewhere in the depths. For example:
 
   ```clojure
-  ;делаем вызов (1)
+  ;call (1)
   (1)
   Execution error (ClassCastException) at user/eval1 (REPL:1).
   class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
   ```
 
-  Рассмотрим наиболее распространенные ошибки, которые могут возникнуть и разберемся, что они означают:
+  The error does not look very informative...
+
+  Consider the most common errors that can occur and understand what they mean:
 
   `X can not be cast to Y`
 
-  Допустим у нас есть какой-то тип `X`, но функция, которая вызывается, ожидает, что ее аргумент будет типом `Y`. Clojure пытается привести тип `X` к типу `Y`, но падает с ошибкой.
+  Suppose we have some type `X`, but the function being called expects its argument to be of type `Y`. Clojure tries to cast type `X` to type `Y`, but crashes with an error.
 
   ```clojure
-  ; Вызовем число как функцию
+  ; Let's call the number as a function
   (def x 10)
   (x)
   Execution error (ClassCastException) at user/eval138 (REPL:1).
@@ -27,10 +29,10 @@ theory: |
 
   `Don't know how to create Y: from X`
 
-  Ошибка очень схожа с примером выше, Clojure пытается конвертировать `X` в `Y`, но не может.
+  The error is very similar to the example above, Clojure tries to convert `X` to `Y` but cannot.
   
   ```clojure
-  ; Попробуем проитерироваться по числу, вместо коллекции
+  ; Let's try to iterate simple number, instead of collection
   (reduce (fn [x y] (into x (+ x 1))) [1 2 3])
   Execution error (IllegalArgumentException) at user/eval1$fn (REPL:1).
   Don't know how to create ISeq from: java.lang.Long
@@ -38,10 +40,10 @@ theory: |
 
   `Wrong number of args (X) passed to: Y`
 
-  Здесь все понятно из названия, мы передаем неправильное количество аргументов в функцию:
+  Here everything is clear from the name, we pass the wrong number of arguments to the function:
 
   ```clojure
-  ; Функция first принимает только один аргумент
+  ; Function first takes only one argument
   (first 1 2 3)
   Execution error (ArityException) at user/eval3 (REPL:1).
   Wrong number of args (3) passed to: clojure.core/first--5402
@@ -49,30 +51,30 @@ theory: |
 
   `X - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings`
 
-  Такая ошибка возникает во время компиляции Clojure кода, например у нас есть форма `let`, которая использует для связи идентификатора и данных - вектор, внутри которого два элемента, сам идентификатор и данные. Clojure внутри себя использует `clojure.spec` чтобы провалидровать такие объявления, поэтому сообщение об ошибке может чуть-чуть каждый раз отличаться:
+  Such an error occurs during the compilation of Clojure code, for example we have a form `let` that uses a vector to connect identifier and data, inside which there are two elements, the identifier itself and the data. Clojure internally uses `clojure.spec` to check such declarations, so the error message may be slightly different each time:
 
   ```clojure
-  ; Валидный пример
+  ; valid code
   (let [a 2]
     (+ a 4)) ; => 6
   
-  ; Невалидный пример
+  ; incorrect code
   (let [a b 3]
     (+ a b))
   Syntax error macroexpanding clojure.core/let at (REPL:1:1).
   [a b 3] - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings
   ```
 
-  Хоть и вывод ошибок может по началу напугать и оттолкнуть новичков, в целом к такому выводу ошибок можно привыкнуть. Однако, благодаря JVM, Clojure доступны все возможности Java мира и не только!
+  Although the error output may scare and discourage newcomers at first, in general it is possible to get used to this error output. However, thanks to the JVM, Clojure has all the features of the Java world and more!
 
   ```clojure
   (Integer/parseInt "123") ; 123
   ```
 
-  В коде выше, мы вызвали статический метод Java, который парсит строку в число. То же самое относится и к библиотекам, написанных для Java. Еще бывают проекты, в которых используется Java, Scala и Clojure одновременно.
+  In the code above, we called a static Java method that parses a string into a number. The same applies to libraries written for Java. There are also projects that use Java, Scala and Clojure at the same time.
 
 instructions: |
-  Выведите в стандартный поток вывода (с помощью функции `println`) результат парсинга строки `256` (с помощью метода `Integer/parseInt`).
+  Print to the standard output stream (using the `println` function) the result of parsing the string `256` (using the `Integer/parseInt` method).
 tips:
   - |
     [JVM](https://ru.wikipedia.org/wiki/Java_Virtual_Machine)
