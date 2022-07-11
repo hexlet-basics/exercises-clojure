@@ -115,3 +115,5 @@ instructions: |
 tips:
   - |
     [Официальная документация](https://clojure.org/reference/multimethods)
+  - |
+    [Большая статья про полиморфизм](https://medium.com/devschacht/polymorphism-207d9f9cd78)
