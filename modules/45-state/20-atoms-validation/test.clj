@@ -3,6 +3,6 @@
             [index :refer [vec-even?]]))
 
 (assert-solution
- [[[0 2 4 6]] [[1 3 5]] [[]] [[0 2 4 5]] [[2]]]
+ [[(atom [0 2 4 6])] [(atom [1 3 5])] [(atom [])] [(atom [0 2 4 5])] [(atom [2])]]
  [true false false false true]
  vec-even?)
