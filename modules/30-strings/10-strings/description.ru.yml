@@ -12,7 +12,7 @@ theory: |
 
   (def splitted-str
     (s/split my-str #", "))   ; ["hello" "world"]
-  
+
   (str my-str "!")            ; "hello, world!"
 
   (s/join #", " splitted-str) ; "hello, world"

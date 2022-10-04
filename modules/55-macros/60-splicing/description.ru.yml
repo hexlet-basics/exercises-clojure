@@ -9,7 +9,7 @@ theory: |
   ```clojure
   (defmacro print-els [coll]
     `(do ~(map println coll)
-      ~coll)) 
+      ~coll))
 
   (print-els [1 2 3])
   1
@@ -50,8 +50,8 @@ theory: |
   ```clojure
   (defmacro print-els [coll]
     `(do ~@(map println coll)
-      ~coll)) 
-  
+      ~coll))
+
   (print-els [1 2 3])
   1
   2
@@ -93,7 +93,7 @@ theory: |
 instructions: |
   Создайте макрос `strange-print`, который принимает строку, выводит в консоль строку сначала в обратном порядке, затем полностью в верхнем регистре, а затем полностью в нижнем и верните из макроса исходную строку.
 
-  А потом вызовите созданный макрос для строк: `foo`, `!baz!`, `cloJURE`. 
+  А потом вызовите созданный макрос для строк: `foo`, `!baz!`, `cloJURE`.
 
   Пример:
 
