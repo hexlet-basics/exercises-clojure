@@ -1,5 +1,5 @@
 ---
 
-name: Состояниe
+name: Состояние
 description: |
   Одна из уникальных особенностей Clojure — это работа с состоянием, в этом модуле обсудим STM (Software Transactional Memory), атомы, агентов и ссылки.
