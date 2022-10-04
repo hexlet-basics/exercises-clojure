@@ -16,7 +16,7 @@ theory: |
 
   ```clojure
   (defmacro strange-macro [coll]
-    '(apply - (apply + coll) coll))
+    `(apply - (apply + coll) coll))
   
   (strange-macro [1 2 3 4])
   Could not resolve symbol: coll
