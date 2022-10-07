@@ -7,7 +7,7 @@ theory: |
   ```clojure
   (defmacro return-some-list [x]
     (list 'let ['one 5]
-    ['one x])) 
+    ['one x]))
 
   (return-some-list 1)
   [5 1]
@@ -77,7 +77,7 @@ theory: |
   (defmacro return-some-list [x]
     `(let [one# 5]
         [one# ~x]))
-  
+
   (return-some-list one)
   [5 1] ; работает!
   ```
