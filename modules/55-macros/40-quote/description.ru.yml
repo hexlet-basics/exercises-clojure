@@ -19,7 +19,7 @@ theory: |
       (list defn name args body)
       "you can't define this function"))
 
-  Syntax error compiling 
+  Syntax error compiling
   Can't take value of a macro: #'clojure.core/defn
   ```
 
@@ -49,7 +49,7 @@ theory: |
   Если расположить оператор `'` перед выражением, то этот оператор рекурсивно применится к выражению и его подвыражениям. Рассмотрим несколько примеров:
 
   ```clojure
-  '(foo bar baz)    
+  '(foo bar baz)
   (foo bar baz)
 
   '(foo (bar tavern pub) baz)
@@ -65,7 +65,7 @@ theory: |
     (if-not (contains? forbidden-list name)
       '(defn name args body)
       "you can't define this function"))
-  
+
   #'user/special-defn
   ; ура, наш макрос удачно скомпилировался, попробуем теперь его в деле
 

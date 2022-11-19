@@ -66,7 +66,7 @@ theory: |
     "Incorrect language provided!")
 
   (greeting de)
-  ; => "No language provided!"
+  ; => "Incorrect language provided!"
   ```
 
   Важно отметить, что мультиметод может ориентироваться не только на переданное значение, но и тип (то есть класс) передаваемого значения:
@@ -115,3 +115,5 @@ instructions: |
 tips:
   - |
     [Официальная документация](https://clojure.org/reference/multimethods)
+  - |
+    [Большая статья про полиморфизм](https://medium.com/devschacht/polymorphism-207d9f9cd78)

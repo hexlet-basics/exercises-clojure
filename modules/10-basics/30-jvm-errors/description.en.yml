@@ -30,7 +30,7 @@ theory: |
   `Don't know how to create Y: from X`
 
   The error is very similar to the example above, Clojure tries to convert `X` to `Y` but cannot.
-  
+
   ```clojure
   ; Let's try to iterate simple number, instead of collection
   (reduce (fn [x y] (into x (+ x 1))) [1 2 3])
@@ -57,7 +57,7 @@ theory: |
   ; valid code
   (let [a 2]
     (+ a 4)) ; => 6
-  
+
   ; incorrect code
   (let [a b 3]
     (+ a b))
