@@ -2,10 +2,7 @@
   (:require [clojure.string :as s]))
 ;BEGIN
 (defn next-chars [string]
-  (->> string
-       (seq)
-       (map int)
-       (map inc)
-       (map char)
-       (s/join #"")))
+  (let [chars-code (map int (seq string))
+        next-chars (map char (map inc chars-code))]
+    (s/join #"" next-chars)))
 ;END
