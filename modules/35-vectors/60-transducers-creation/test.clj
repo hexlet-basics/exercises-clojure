@@ -4,13 +4,9 @@
 
 (assert-solution
  [[[]]
-  [[{:student-name "Harry Potter"
-     :discipline "Magic"}]]
-  [[{:student-name "Luke Skywalker"
-     :discipline "Jedi"}
-    {:student-name "Hermione Granger"
-     :discipline "Magic"}
-    {:student-name "Walter White"
-     :discipline "Chemistry"}]]]
+  [[["Harry Potter" "Magic"]]]
+  [[["Luke Skywalker" "Jedi"]
+    ["Hermione Granger" "Magic"]
+    ["Walter White" "Chemistry"]]]]
  [[] ["harry-potter"] ["luke-skywalker" "hermione-granger" "walter-white"]]
  #(into [] do-name-magic %))
