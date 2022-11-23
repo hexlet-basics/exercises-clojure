@@ -1,7 +1,7 @@
 (ns index)
 ;BEGIN
 (defn student-names
-  ([] (map :student-name))
+  ([] (map first))
   ([students] (sequence (student-names) students)))
 
 (defn lowercase-names
