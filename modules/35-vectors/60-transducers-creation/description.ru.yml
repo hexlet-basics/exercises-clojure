@@ -37,7 +37,7 @@ theory: |
 
   ; трансдьюсер для умножения всей коллекции на свои элементы (поиск произведения коллекции)
   (defn product
-    ([] (*))
+    ([] *)
     ([coll] (reduce (product) 1 coll))
     ([xform coll] (transduce xform (product) 1 coll)))
   ```
