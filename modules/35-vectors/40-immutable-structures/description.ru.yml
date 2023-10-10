@@ -27,4 +27,4 @@ tips:
   - |
     [Об иммутабельности в Clojure](https://clojure.org/reference/transients)
   - |
-    [Для любопытных, про трансдьюсеры](https://clojure.org/reference/transducers)
+    [Для любопытных, про трансдьюсеры](https://clojure.org/reference/transducers). Для решения задания можно воспользоваться функцией `partition-all`
