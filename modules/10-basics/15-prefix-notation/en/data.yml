@@ -1,0 +1,7 @@
+name: Prefix notation
+tips:
+  - |
+    [Polish notation](https://en.wikipedia.org/wiki/Polish_notation)
+  - >
+    [Default Clojure code linter and
+    formatter](https://github.com/weavejester/cljfmt)

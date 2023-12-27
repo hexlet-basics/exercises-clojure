@@ -1,0 +1,6 @@
+name: JVM и ошибки
+tips:
+  - |
+    [JVM](https://ru.wikipedia.org/wiki/Java_Virtual_Machine)
+  - |
+    [Java Interop](https://clojure.org/reference/java_interop)

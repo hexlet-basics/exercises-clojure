@@ -1,0 +1,7 @@
+name: Объявление символов
+tips:
+  - >
+    [Про функциональную парадигму в
+    Clojure](https://clojure.org/about/functional_programming)
+  - |
+    [Про форму def](https://clojure.org/guides/learn/syntax#_def)

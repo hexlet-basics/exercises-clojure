@@ -1,0 +1,10 @@
+name: Данные как код
+tips:
+  - >
+    [Модуль по
+    спискам](https://ru.code-basics.com/languages/clojure/lessons/intro)
+  - >
+    [Статья о символе
+    '](https://8thlight.com/blog/colin-jones/2012/05/22/quoting-without-confusion.html)
+  - |
+    [Еще немного о макросах](https://www.braveclojure.com/writing-macros/)

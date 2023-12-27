@@ -1,0 +1,7 @@
+name: Объявление списков
+tips:
+  - >
+    [Официальная
+    документация](https://clojure.org/guides/learn/sequential_colls#_lists)
+  - |
+    [Про цитирование](https://clojuredocs.org/clojure.core/quote)

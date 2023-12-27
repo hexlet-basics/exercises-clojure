@@ -1,0 +1,10 @@
+name: Сортированные хеш-мапы
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/sorted-map)
+  - >
+    [Функция compare, которая сортирует
+    ключи](https://clojuredocs.org/clojure.core/compare)
+  - >
+    [Sorted-map-by официальная
+    документация](https://clojuredocs.org/clojure.core/sorted-map-by)

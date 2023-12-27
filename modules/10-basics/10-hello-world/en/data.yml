@@ -1,0 +1,13 @@
+name: Hello, World!
+tips:
+  - |
+    [Clojure official](https://clojure.org/)
+  - |
+    [Homoiconicity](https://en.wikipedia.org/wiki/Homoiconicity)
+  - |
+    [Rich Hickey, Simple Made Easy](https://www.youtube.com/watch?v=SxdOUGdseq4)
+  - >
+    [Babashka, Clojure scripting
+    instrument](https://github.com/babashka/babashka)
+  - |
+    [S-expression](https://en.wikipedia.org/wiki/S-expression)

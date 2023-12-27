@@ -1,0 +1,7 @@
+name: Встроенные средства обхода списков, map
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/map)
+  - >
+    [Про map, filter,
+    reduce](https://ru.hexlet.io/blog/posts/js-prosto-o-slozhnom-filter-map-reduce)

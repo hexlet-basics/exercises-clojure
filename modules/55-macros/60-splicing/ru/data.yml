@@ -1,0 +1,7 @@
+name: Splicing
+tips:
+  - >
+    [Официальная
+    документация](https://clojuredocs.org/clojure.core/unquote-splicing)
+  - |
+    [Еще немного о макросах](https://www.braveclojure.com/writing-macros/)

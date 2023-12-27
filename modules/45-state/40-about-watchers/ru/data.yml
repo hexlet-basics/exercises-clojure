@@ -1,0 +1,4 @@
+name: Наблюдатели
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/add-watch)

@@ -1,0 +1,4 @@
+name: Валидация атомов
+tips:
+  - |
+    [Официальная документация](https://clojure.org/reference/atoms)

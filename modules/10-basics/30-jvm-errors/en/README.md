@@ -1,0 +1,70 @@
+A bit about the JVM platform that Clojure uses. Very often, the guts of the JVM early stage look out, which makes most runtime errors hard to read, especially if the error occurred somewhere in the depths. For example:
+
+```clojure
+;call (1)
+(1)
+Execution error (ClassCastException) at user/eval1 (REPL:1).
+class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+```
+
+The error does not look very informative...
+
+Consider the most common errors that can occur and understand what they mean:
+
+`X can not be cast to Y`
+
+Suppose we have some type `X`, but the function being called expects its argument to be of type `Y`. Clojure tries to cast type `X` to type `Y`, but crashes with an error.
+
+```clojure
+; Let's call the number as a function
+(def x 10)
+(x)
+Execution error (ClassCastException) at user/eval138 (REPL:1).
+class java.lang.Long cannot be cast to class clojure.lang.IFn
+```
+
+`Don't know how to create Y: from X`
+
+The error is very similar to the example above, Clojure tries to convert `X` to `Y` but cannot.
+
+```clojure
+; Let's try to iterate simple number, instead of collection
+(reduce (fn [x y] (into x (+ x 1))) [1 2 3])
+Execution error (IllegalArgumentException) at user/eval1$fn (REPL:1).
+Don't know how to create ISeq from: java.lang.Long
+```
+
+`Wrong number of args (X) passed to: Y`
+
+Here everything is clear from the name, we pass the wrong number of arguments to the function:
+
+```clojure
+; Function first takes only one argument
+(first 1 2 3)
+Execution error (ArityException) at user/eval3 (REPL:1).
+Wrong number of args (3) passed to: clojure.core/first--5402
+```
+
+`X - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings`
+
+Such an error occurs during the compilation of Clojure code, for example we have a form `let` that uses a vector to connect identifier and data, inside which there are two elements, the identifier itself and the data. Clojure internally uses `clojure.spec` to check such declarations, so the error message may be slightly different each time:
+
+```clojure
+; valid code
+(let [a 2]
+  (+ a 4)) ; => 6
+
+; incorrect code
+(let [a b 3]
+  (+ a b))
+Syntax error macroexpanding clojure.core/let at (REPL:1:1).
+[a b 3] - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings
+```
+
+Although the error output may scare and discourage newcomers at first, in general it is possible to get used to this error output. However, thanks to the JVM, Clojure has all the features of the Java world and more!
+
+```clojure
+(Integer/parseInt "123") ; 123
+```
+
+In the code above, we called a static Java method that parses a string into a number. The same applies to libraries written for Java. There are also projects that use Java, Scala and Clojure at the same time.

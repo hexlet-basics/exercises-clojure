@@ -1,0 +1,5 @@
+name: Советы по созданию макросов
+tips:
+  - >
+    [Пример хороших макросов в
+    clojure.test](https://github.com/clojure/clojure/blob/master/src/clj/clojure/test.clj)

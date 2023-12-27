@@ -1,0 +1,5 @@
+name: Сокращенный синтаксис создания функции
+definitions: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/defn)
