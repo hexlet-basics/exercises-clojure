@@ -1,0 +1,4 @@
+name: Условная конструкция
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/if)

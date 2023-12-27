@@ -1,0 +1,4 @@
+name: Еще об объявлении символов
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/defonce)

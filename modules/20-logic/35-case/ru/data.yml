@@ -1,0 +1,4 @@
+name: Case
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/case)

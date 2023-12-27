@@ -1,0 +1,4 @@
+name: Агенты
+tips:
+  - |
+    [Официальная документация](https://clojure.org/reference/agents)

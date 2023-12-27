@@ -1,0 +1,5 @@
+name: Локальные объявления
+definitions: []
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/let)

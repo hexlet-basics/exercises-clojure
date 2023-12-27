@@ -1,0 +1,5 @@
+name: Пространства имен
+definitions: []
+tips:
+  - |
+    [Официальная документация](https://clojure.org/reference/namespaces)

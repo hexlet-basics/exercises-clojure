@@ -1,0 +1,4 @@
+name: When и When-not
+tips:
+  - |
+    [Официальная документация](https://clojuredocs.org/clojure.core/when)
