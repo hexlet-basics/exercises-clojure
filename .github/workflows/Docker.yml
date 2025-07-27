@@ -16,4 +16,4 @@ jobs:
       - uses: hexlet-basics/exercises-action@release
         with:
           DOCKER_USERNAME: ${{ github.actor }}
-          DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKET }}
+          DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
