@@ -5,5 +5,4 @@ version: '3'
 services:
   exercises:
     build: .
-    image: hexletbasics/exercises-clojure:cached
     command: make check
