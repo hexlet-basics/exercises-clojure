@@ -30,9 +30,9 @@ def func(foo):
 
 ```python
 len(func(arg1, arg2))
-Traceback (most recent call last):
-File "<stdin>", line 1, in <module>
-NameError: name 'func' is not defined
+# Traceback (most recent call last):
+# File "<stdin>", line 1, in <module>
+# NameError: name 'func' is not defined
 ```
 
 А какая здесь связь с макросами? Если описывать упрощенно, то макросы создают валидные lisp формы для их выполнения (evaluation). Макросы можно воспринимать как lisp трансляторы: вы передаете какие-то данные и макрос переводит эти данные уже в валидные lisp данные (которые как код можно выполнить).
