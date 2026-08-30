@@ -9,9 +9,10 @@ Let's try another version: `5 - (3 + 1)`. In this expression, the parentheses se
 At such moments, another distinctive feature of Lisp languages comes to light. The tree structure of the program itself determines the sequence of subtree computation. There is no need to use additional brackets.
 
 Another example: `5 + 7 + (8 - 3) - (8 * 5)`. We act according to the usual scheme:
-* `(* 5 8)`
-* `(- 8 3)`
-* `(+ 5 7 (- 8 3))`
-* `(- (+ 5 7 (- 8 3)) (* 5 8))`
+
+- `(* 5 8)`
+- `(- 8 3)`
+- `(+ 5 7 (- 8 3))`
+- `(- (+ 5 7 (- 8 3)) (* 5 8))`
 
 In some situations, the order in which the list items are calculated does not match the order in which they are placed. This happens when using special forms and macros. We will talk about this later.
