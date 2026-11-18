@@ -8,18 +8,19 @@
 (defn ^:export assert-output [expected]
   (deftest output-test
     (let [out (s/trim (with-out-str (load-file "index.clj")))]
-      (is (= out expected))))
+      (is (= expected out))))
   (run-test))
 
 (defn ^:export assert-solution [samples expected solution]
   (let [combined (map vector samples expected)]
     (deftest solution-test
       (doseq [[sample result] combined]
-        (is (= (apply solution sample) result)))))
+        (is (= result (apply solution sample))
+            (str "Arguments: " (pr-str sample))))))
   (run-test))
 
 (defn ^:export check-eq [val expected]
   (deftest value-assert-test
-    (is (= val expected)))
+    (is (= expected val)))
   (run-test))
 
